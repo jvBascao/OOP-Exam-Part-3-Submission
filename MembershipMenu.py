@@ -60,7 +60,7 @@ class MembershipMenu:
         if success:
             print("Membership renewed successfully.")
         else:
-            print("No member found with that ID.")
+            print("This ID number doesn't exist.")
     # END OF METHOD: handle_renew
 
     # START OF METHOD: handle_record_visit
@@ -68,7 +68,7 @@ class MembershipMenu:
         member_id = input("Enter member ID: ")
         member = self._tracker.find_member(member_id)
         if member is None:
-            print("No member found with that ID.")
+            print("This ID number doesn't exist.")
         else:
             member.record_visit()
             print(f"Visit recorded. {member.get_name()} now has {member.get_visit_count()} visits.")
@@ -77,8 +77,11 @@ class MembershipMenu:
     # START OF METHOD: handle_check_validity
     def handle_check_validity(self):
         member_id = input("Enter member ID: ")
-        is_valid = self._tracker.is_valid_member(member_id)
-        print(f"Valid: {is_valid}")
+        member = self._tracker.find_member(member_id)
+        if member is None:
+            print("This ID number doesn't exist.")
+        else:
+            print(f"Valid: {member.is_valid()}")
     # END OF METHOD: handle_check_validity
 
     # START OF METHOD: handle_view_member
@@ -86,7 +89,7 @@ class MembershipMenu:
         member_id = input("Enter member ID: ")
         member = self._tracker.find_member(member_id)
         if member is None:
-            print("No member found with that ID.")
+            print("This ID number doesn't exist.")
         else:
             print(member.view_info())
     # END OF METHOD: handle_view_member
@@ -103,7 +106,7 @@ class MembershipMenu:
         if success:
             print("Member removed.")
         else:
-            print("No member found with that ID.")
+            print("This ID number doesn't exist.")
     # END OF METHOD: handle_remove
 
     # START OF METHOD: handle_save
@@ -116,6 +119,14 @@ class MembershipMenu:
     def run(self):
         # Main loop: keeps showing the menu and handling choices
         # until the user picks Exit.
+
+        # Simplified staff login placeholder - just asks for a name,
+        # no real authentication yet. This exists so the flow
+        # matches the approved User Journey ("Log in as staff").
+        # TODO: replace with real staff authentication later.
+        staff_name = input("Staff login - enter your name: ")
+        print(f"Welcome, {staff_name}!")
+
         running = True
         while running:
             self.show_menu()
@@ -138,7 +149,7 @@ class MembershipMenu:
             elif choice == "8":
                 self.handle_save()
             elif choice == "9":
-                print("Goodbye!")
+                print(f"Goodbye, {staff_name}! Logging out.")
                 running = False
             else:
                 print("Invalid choice. Please try again.")

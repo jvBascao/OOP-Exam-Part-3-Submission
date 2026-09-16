@@ -17,6 +17,7 @@
 # - based on accumulated visits and renewals.
 # 9. Confirm, validate, and persist the updated member records to the database.
 # 10. Log out securely and terminate the active staff session.
+# Disclaimer: CLI is still not fully functional.
 
 import datetime
 
