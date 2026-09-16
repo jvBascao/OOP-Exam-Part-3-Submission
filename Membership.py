@@ -5,6 +5,19 @@
 # (visits and renewals), used to award simple recognition badges.
 # Author: Julian V. Bascao
 
+# User Journey & System Features oved):
+# 1. Open the application and initialize the core system architecture.
+# 2. Log in as a staff member using secure credentials and establish a user session.
+# 3. Search for an existing member record, or register a new member profile if they do not yet have an account.
+# 4. View the member's comprehensive account details and current status (active or expired).
+# 5. Process membership renewals if the account has expired or is expiring soon.
+# 6. Record daily check-ins to track member visits and drive automated engagement metrics.
+# 7. Evaluate and update loyalty points, tracking total renewals to reward long-term commitment.
+# 8. Award automated recognition badges (New Member, Regular, Loyal Member, Returning Member, Veteran Member) 
+# based on accumulated visits and renewals.
+# 9. Confirm, validate, and persist the updated member records to the database.
+# 10. Log out securely and terminate the active staff session.
+
 import datetime
 
 
