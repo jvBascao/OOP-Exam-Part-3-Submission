@@ -101,19 +101,5 @@ class MembershipTBDriver:
 
 # END OF CLASS: MembershipTBDriver
 
-
-# START OF MAIN
 if __name__ == "__main__":
     driver = MembershipTBDriver()
-
-    # ---- Template: edit the values below, then uncomment, to run a demo ----
-    # driver.run(
-    #     name1="Alice Santos", contact1="alice@email.com",
-    #     name2="Bob Cruz", contact2="bob@email.com",
-    #     visit_count=6, renewal_count=2, fake_id="M999"
-    # )
-
-    # ---- Or call individual pieces on their own, e.g.: ----
-    # m1, m2 = driver.demo_registration("Alice Santos", "alice@email.com", "Bob Cruz", "bob@email.com")
-    # driver.demo_visits(m1, 6)
-# END OF MAIN
