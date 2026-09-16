@@ -5,7 +5,7 @@
 # (visits and renewals), used to award simple recognition badges.
 # Author: Julian V. Bascao
 
-# User Journey & System Features oved):
+# User Journey:
 # 1. Open the application and initialize the core system architecture.
 # 2. Log in as a staff member using secure credentials and establish a user session.
 # 3. Search for an existing member record, or register a new member profile if they do not yet have an account.
